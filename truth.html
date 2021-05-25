@@ -36,7 +36,8 @@ scene.add(box);
 //球
 var sphereGeometry = new THREE.SphereGeometry( 0.5, 32, 32 ); 
 var loader = new THREE.TextureLoader();
-var sphereMaterial = new THREE. MeshStandardMaterial(color: 0x00bfff,map: world.jpg);
+var texture = loader.load('https://ookubo-masaaki.github.io/Task/worldmap.jpg');
+var sphereMaterial = new THREE. MeshStandardMaterial(map: texture);
 var sphere1 = new THREE.Mesh( sphereGeometry, sphereMaterial );
 var sphere2 = new THREE.Mesh( sphereGeometry, sphereMaterial );
 sphere1.position.set( 1.3, 0, -5 );
