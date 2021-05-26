@@ -42,6 +42,8 @@ sphere1.position.set( 1.5, 0, -5 );
 sphere2.position.set( -1.5, 0, -5 );
 scene.add( sphere1 );
 scene.add( sphere2 );
+	  
+	  var judgment = abs(sphere1.position.x);
 
     // 平行光源1
     var directionalLight1 = new THREE.DirectionalLight(0xffffff);
@@ -62,7 +64,7 @@ scene.add( sphere2 );
       sphere1.rotation.y += 0.01;
       sphere2.rotation.y += 0.01;
 	  
-	  if(abs(sphere1.position.x) == 3){
+	  if(judgment == 3){
 		  sphere1.position.x -=0.01;
 	  }
 	  sphere1.position.x +=0.01;
