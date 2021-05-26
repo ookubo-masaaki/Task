@@ -43,9 +43,16 @@ sphere2.position.set( -1.5, 2, -5 );
 scene.add( sphere1 );
 scene.add( sphere2 );
 	  
-	  var judgment = Math.abs([sphere2.position.x]);
+	  var judgment1_1 = Math.abs([sphere1.position.x]);
+	  console.log(judgment1_1);
+	  var judgment1_2 = Math.abs([sphere1.position.y]);
+	  console.log(judgment1_2);
 	  
-	  console.log(judgment);
+	  var judgment2_1 = Math.abs([sphere2.position.x]);
+	  console.log(judgment2_1);
+	  var judgment2_2 = Math.abs([sphere2.position.y]);
+	  console.log(judgment2_2);
+
 
     // 平行光源1
     var directionalLight1 = new THREE.DirectionalLight(0xffffff);
