@@ -13,6 +13,9 @@
 
     var width = 1200,
         height = 800;
+	  
+	var mutation1 = 0.01;
+	var mutation2 = 0.01;
   
     // レンダラーを作成
     var renderer = new THREE.WebGLRenderer();
@@ -74,18 +77,15 @@ scene.add( sphere2 );
       sphere2.rotation.y += 0.01;
 	  
 	  if(judgment1_1 == 3){
-		  sphere1.position.x = sphere1.position.x * -1;
-	  }else{
-		  sphere1.position.x +=0.01;
+		  mutation1 = mutation1 * -1;
 	  }
 		
 	  if(judgment1_2 == 2){
-		  sphere1.position.y = sphere1.position.y * -1;
-	  }else{
-		  sphere1.position.y +=0.01;
+		  mutation1 = mutation2 * -1;
 	  }
-	  
-	  sphere1.position.y +=0.01;
+		
+	  sphere1.position.x = sphere1.position.x + mutation1;
+	  sphere1.position.y = sphere2.position.y + mutation2;
 	
 	
 	  // 箱
