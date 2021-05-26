@@ -46,6 +46,7 @@ sphere2.position.set( -1.5, 0, -5 );
 scene.add( sphere1 );
 scene.add( sphere2 );
 	  
+	  /*
 	  var judgment1_1 = Math.abs([sphere1.position.x]);
 	  // console.log(judgment1_1);
 	  var judgment1_2 = Math.abs([sphere1.position.y]);
@@ -55,6 +56,7 @@ scene.add( sphere2 );
 	  // console.log(judgment2_1);
 	  var judgment2_2 = Math.abs([sphere2.position.y]);
 	  // console.log(judgment2_2);
+	  */
 
 
     // 平行光源1
@@ -84,7 +86,7 @@ scene.add( sphere2 );
 		  mutation1 -=0.01;
 	  }
 	    if(sphere1.position.x < -3){
-		  mutation1 +=0,01;
+		  mutation1 =0,01;
 	  }
 		
 	  if(sphere1.position.y > 2){
@@ -92,7 +94,7 @@ scene.add( sphere2 );
 	  }
 	    
 	    if(sphere1.position.y < -2){
-		  mutation2 +=0,01;
+		  mutation2 =0,01;
 	  }
 		
 	  
