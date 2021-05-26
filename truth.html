@@ -16,6 +16,9 @@
 	  
 	var mutation1 = 0.01;
 	var mutation2 = 0.01;
+	  
+	var mutation3 = -0.01;
+	var mutation4 = -0.01;
   
     // レンダラーを作成
     var renderer = new THREE.WebGLRenderer();
@@ -95,6 +98,25 @@ scene.add( sphere2 );
 	    
 	    if(sphere1.position.y < -2){
 		  mutation2 +=0.01;
+	  }
+	    
+	  sphere2.position.x = sphere2.position.x + mutation3;
+	  sphere2.position.y = sphere2.position.y + mutation4;
+	    
+	  if(sphere2.position.x > 3){
+		  //sphere1.position.x = 1.5;
+		  mutation3 -=0.01;
+	  }
+	    if(sphere2.position.x < -3){
+		  mutation3 +=0.01;
+	  }
+		
+	  if(sphere2.position.y > 2){
+		  mutation4 -= 0.01;
+	  }
+	    
+	    if(sphere2.position.y < -2){
+		  mutation4 +=0.01;
 	  }
 		
 	  
