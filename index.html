@@ -3,14 +3,45 @@
 <head>
 <meta charset="utf-8">
 <title>CG演習（１）</title>
+  
+  <script>
+    function updateClock(){
+      var now = new Date();
+      var hour = now.getHours();
+      var minute = now.getMinutes();
+      var second = now.getSeconds();
+      if(hour < 10 ){
+        hour = "0" + hour;
+      }
+      if(minute < 10 ){
+        minute = "0" + hour;
+      }
+      if(second < 10){
+        second = "0" + second;
+      }
+      
+      document.getElementById('myClock').innerHTML = hour+":"+minute+":"+second;
+    }
+    
+    function start(){
+      setInterval("updateClock();", 1000);
+      updateClock();
+    }
+  </script>
+  
 </head>
-
-<body>
-<h1>CG演習（１）
+  
+<body onload="start();">
+<h1>
+  CG演習（１）
 </h1>
-<h2>サンプル</h2>
-<h2>レポート作品例</h2>
+<h2>
+  レポート作品例
+</h2>
 
 <p><a href="truth.html">truth</a></p>
+  
+  <div id="myClock" align="center" style="font:bold 30pt Times New Roman;">
+    </div>
 </body>
 </html>
